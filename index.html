@@ -30,10 +30,16 @@
     <main>
       <div class="card-container">
         <div class="card-image">
-          <img
-            src="./images/image-product-mobile.jpg"
-            alt="Square shaped glass perfume bottle laying on a table with leaves around it"
-          />
+          <picture>
+            <source
+              srcset="./images/image-product-desktop.jpg"
+              media="(min-width:640px)"
+            />
+            <img
+              src="./images/image-product-mobile.jpg"
+              alt="Square shaped glass perfume bottle laying on a table with leaves around it"
+            />
+          </picture>
         </div>
 
         <div class="card-content">

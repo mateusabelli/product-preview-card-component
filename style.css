@@ -153,7 +153,7 @@ main {
 
 /* --------- Media Queries --------- */
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 640px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
     max-width: var(--desktop-width);
@@ -166,7 +166,16 @@ main {
     padding: 2rem;
   }
 
-  .card-image > img {
-    content: url("./images/image-product-desktop.jpg");
+  .card-label {
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-price-container {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 }
