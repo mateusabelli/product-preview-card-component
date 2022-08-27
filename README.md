@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [TODO](#)
-- Live Site URL: [TODO](#)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/responsive-component-written-in-html-and-css-SrL100S2q9)
+- Live Site URL: [https://mateusabelli.github.io/product-preview-card-component/](https://mateusabelli.github.io/product-preview-card-component/)
 
 ## My process
 
