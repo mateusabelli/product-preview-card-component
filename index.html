@@ -4,33 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:ital,wght@0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>Product preview card component</title>
   </head>
   <body>
-    Preview Gabrielle Essence Eau De Parfum A floral, solar and voluptuous
-    interpretation composed by Olivier Polge, Perfumer-Creator for the House of
-    CHANEL. $149.99 $169.99 Add to Cart
+    <main>
+      <div class="card-container">
+        <div class="card-image">
+          <img
+            src="./images/image-product-mobile.jpg"
+            alt="Square shaped glass perfume bottle laying on a table with leaves around it"
+          />
+        </div>
 
-    <div class="attribution">
-      <p>
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa"
-          target="_blank"
-          >Frontend Mentor </a
-        >. Coded by
-        <a href="https://github.com/mateusabelli" target="_blank"
-          >Mateus Abellli</a
-        >.
-      </p>
-    </div>
+        <div class="card-content">
+          <p class="card-label">Perfume</p>
+
+          <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
+
+          <p class="card-description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+
+          <div class="card-price-container">
+            <span class="card-current-price">$149.99</span>
+            <span class="card-previous-price">$169.99</span>
+          </div>
+
+          <button class="card-button">
+            <img src="./images/icon-cart.svg" alt="" />
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

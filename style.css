@@ -1,7 +1,161 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
+/* --------- Variables --------- */
+
+:root {
+  /* Primary */
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-green: hsl(158, 36%, 37%);
+  --clr-dark-green: hsl(158, 36%, 17%);
+
+  /* Neutral */
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font Family */
+  --ff-sans: "Montserrat", sans-serif;
+  --ff-serif: "Fraunces", serif;
+
+  /* Font Weight */
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Font Sizes */
+  --fs-sm: 0.875rem;
+  --fs-lg: 2rem;
+
+  /* Card Width */
+  --mobile-width: 21.5rem;
+  --desktop-width: 37.5rem;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+/* --------- Reset & Base --------- */
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-medium);
+  line-height: 1.6;
+
+  text-rendering: optimizeSpeed;
+  background-color: var(--clr-cream);
+}
+
+/* Inherit fonts for buttons */
+button {
+  font: inherit;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --------- Card Styling --------- */
+
+/* Avoid card touching the sides */
+main {
+  padding: 0 1rem;
+}
+
+.card-container {
+  max-width: var(--mobile-width);
+  display: grid;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 1.5rem;
+  color: var(--clr-dark-grayish-blue);
+  font-size: var(--fs-sm);
+  background-color: var(--clr-white);
+}
+
+.card-label {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  color: var(--clr-very-dark-blue);
+  font-size: var(--fs-lg);
+  font-family: var(--ff-serif);
+  line-height: 1;
+}
+
+.card-price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-current-price {
+  color: var(--clr-green);
+  font-size: var(--fs-lg);
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+}
+
+.card-previous-price {
+  text-decoration: line-through;
+}
+
+.card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  padding: 0.75rem;
+  width: 100%;
+
+  color: var(--clr-white);
+  border: none;
+  border-radius: 8px;
+  background-color: var(--clr-green);
+
+  transition: background-color 0.15s;
+}
+
+.card-button:focus-visible,
+.card-button:hover {
+  cursor: pointer;
+  background-color: var(--clr-dark-green);
+}
+
+/* --------- Media Queries --------- */
+
+@media screen and (min-width: 40rem) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    max-width: var(--desktop-width);
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .card-image > img {
+    content: url("./images/image-product-desktop.jpg");
+  }
 }
